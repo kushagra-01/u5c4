@@ -1,19 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link,useNavigate,useParams } from "react-router-dom";
+
 
 export const Home = () => {
 
   const [form,setform]=useState([])
   const [location,setlocation]=useState()
-
+const navigate=useNavigate()
 
   
 
   useEffect(()=>{
     getdata()
    },[])
-
 
   const getdata = () =>{
     axios.get('http://localhost:8080/meetups').then(({data})=>{setform(data)})
