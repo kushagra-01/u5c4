@@ -12,6 +12,7 @@ const [form,setform]=useState({
   theme:"",
   description:"",
   image:"",
+  status:"Unsubscribe"
 
 })
 const handleChange =(e)=>{

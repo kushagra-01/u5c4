@@ -82,7 +82,7 @@ const navigate=useNavigate()
           {form
             .map((el) => {
               return (
-                <Link to={`/meetups/${el.location}`} className="events">
+                <Link to={`/Event/${el.id}`} className="events">
                   {
                   /* Each event should have these elements/children (divs):
                     ex : title, theme, description, date, time, location, image(optional)
@@ -95,6 +95,7 @@ const navigate=useNavigate()
     <td>{el.description}</td>
     <td>{el.date}</td>
     <td>{el.time}</td>
+    <td>{el.location}</td>
   
     </tbody>
 
